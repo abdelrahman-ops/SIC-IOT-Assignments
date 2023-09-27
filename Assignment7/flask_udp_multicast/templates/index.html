@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>UDP Multicast and Database Example</title>
+</head>
+<body>
+    <h1>UDP Multicast and Database Example</h1>
+    <form method="POST" action="/insert">
+        <label for="content">Enter a message:</label>
+        <input type="text" id="content" name="content" required>
+        <button type="submit">Submit</button>
+    </form>
+    <h2>Messages:</h2>
+    <ul>
+        {% for message in data %}
+            <li>{{ message[1] }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
